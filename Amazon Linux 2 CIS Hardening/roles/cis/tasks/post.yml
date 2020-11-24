@@ -1,0 +1,14 @@
+---
+- name: Perform YUM package cleanup
+  yum:
+    autoremove: true
+  changed_when: no
+  ignore_errors: yes
+
+- name: save iptables
+  command: service iptables save
+  become: true
+
+- name: save ip6tables
+  command: service ip6tables save
+  become: true
