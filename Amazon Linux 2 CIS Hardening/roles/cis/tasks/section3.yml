@@ -650,7 +650,7 @@
   when:
     - amazonlinux2cis_level1 is defined and amazonlinux2cis_level1
     - amazonlinux2cis_firewall is defined and amazonlinux2cis_firewall == "iptables"
-    - amazonlinux2cis_firewall_default_deny_rule is defined and amazonlinux2cis_firewall_default_deny_rule
+    - amazonlinux2cis_firewall_default_deny_rule is defined and (amazonlinux2cis_firewall_default_deny_rule or not amazonlinux2cis_ipv6_required)
   tags:
     - level1
     - patch
@@ -667,7 +667,7 @@
   when:
     - amazonlinux2cis_level1 is defined and amazonlinux2cis_level1
     - amazonlinux2cis_firewall is defined and amazonlinux2cis_firewall == "iptables"
-    - amazonlinux2cis_firewall_default_deny_rule is defined and amazonlinux2cis_firewall_default_deny_rule
+    - amazonlinux2cis_firewall_default_deny_rule is defined and (amazonlinux2cis_firewall_default_deny_rule or not amazonlinux2cis_ipv6_required)
   tags:
     - level1
     - patch
@@ -684,7 +684,7 @@
   when:
     - amazonlinux2cis_level1 is defined and amazonlinux2cis_level1
     - amazonlinux2cis_firewall is defined and amazonlinux2cis_firewall == "iptables"
-    - amazonlinux2cis_firewall_default_deny_rule is defined and amazonlinux2cis_firewall_default_deny_rule
+    - amazonlinux2cis_firewall_default_deny_rule is defined and (amazonlinux2cis_firewall_default_deny_rule or not amazonlinux2cis_ipv6_required)
   tags:
     - level1
     - patch
