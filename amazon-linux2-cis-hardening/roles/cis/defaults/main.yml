@@ -152,7 +152,7 @@ amazonlinux2cis_host_allow:
     - "192.168.0.0/255.255.0.0"
 
 # 3.4.3 | Ensure /etc/hosts.deny is configured
-amazonlinux2cis_enable_hosts_deny: true
+amazonlinux2cis_enable_hosts_deny: false
 
 # Section 3.6.1 | Ensure iptables is installed
 # Selection of firewall package to use below | default: iptables
